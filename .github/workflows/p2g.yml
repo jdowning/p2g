@@ -17,4 +17,3 @@ jobs:
           peloton_password: ${{ secrets.PELOTON_PASSWORD }}
           garmin_email: ${{ secrets.GARMIN_EMAIL }}
           garmin_password: ${{ secrets.GARMIN_PASSWORD }}
-          docker_tag: v3.5.1
