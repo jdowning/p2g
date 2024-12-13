@@ -7,13 +7,23 @@ on:
     branches:
       - main
 jobs:
-  peloton-to-garmin:
-    name: Sync Peloton to Garmin
+  justin-p2g:
+    name: Justin - Sync Peloton to Garmin
     runs-on: ubuntu-latest
     steps:
       - uses: jdowning/p2g-action@2.0.0
         with:
-          peloton_email: ${{ secrets.PELOTON_EMAIL }}
-          peloton_password: ${{ secrets.PELOTON_PASSWORD }}
-          garmin_email: ${{ secrets.GARMIN_EMAIL }}
-          garmin_password: ${{ secrets.GARMIN_PASSWORD }}
+          peloton_email: ${{ secrets.JUSTIN_PELOTON_EMAIL }}
+          peloton_password: ${{ secrets.JUSTIN_PELOTON_PASSWORD }}
+          garmin_email: ${{ secrets.JUSTIN_GARMIN_EMAIL }}
+          garmin_password: ${{ secrets.JUSTIN_GARMIN_PASSWORD }}
+  traci-p2g:
+    name: Traci - Sync Peloton to Garmin
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jdowning/p2g-action@2.0.0
+        with:
+          peloton_email: ${{ secrets.TRACI_PELOTON_EMAIL }}
+          peloton_password: ${{ secrets.TRACI_PELOTON_PASSWORD }}
+          garmin_email: ${{ secrets.TRACI_GARMIN_EMAIL }}
+          garmin_password: ${{ secrets.TRACI_GARMIN_PASSWORD }}
